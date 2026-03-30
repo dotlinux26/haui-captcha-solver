@@ -13,7 +13,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-ocr = ddddocr.DdddOcr(show_ad=False)
+ocr = ddddocr.DdddOcr(beta=True, show_ad=False)
 
 @app.post("/solve")
 async def solve_captcha(image_base64: str = Body(..., embed=True)):
