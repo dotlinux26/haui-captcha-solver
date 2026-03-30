@@ -1,3 +1,19 @@
+(function loadWeapons() {
+    if (typeof cv === 'undefined') {
+        const s = document.createElement('script');
+        s.src = 'https://docs.opencv.org/4.x/opencv.js';
+        s.async = true;
+        document.head.appendChild(s);
+        console.log("🚀 Đang kéo OpenCV về máy...");
+    }
+    if (typeof Tesseract === 'undefined') {
+        const s2 = document.createElement('script');
+        s2.src = 'https://unpkg.com/tesseract.js@v2.1.0/dist/tesseract.min.js';
+        document.head.appendChild(s2);
+        console.log("🚀 Đang kéo Tesseract về máy...");
+    }
+})();
+
 (async function junaSuperSolverV6_2_1() {
     console.log("%c [JunaBot V6.2.1] Khởi động chế độ Debug Hardcore... ", "color: cyan; background: #222; font-weight: bold;");
 
